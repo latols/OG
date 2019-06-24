@@ -2,7 +2,7 @@ class adjacencyMatrix:
     def __init__(self, graph):
         self.vertices = graph["vertices"]
         self.n = len(self.vertices)    
-        self.adjMatrix = [[0 for x in range(self.n)] for y in range(self.n)]  #iniciando uma matrix n x n com zeros
+        self.adjMatrix = [[0 for x in range(self.n)] for y in range(self.n)]  #iniciando uma matriz n x n com zeros
 
         for m in graph["arestas"]:
             edge1, edge2 = m[0], m[1]
@@ -16,11 +16,8 @@ class adjacencyMatrix:
         self.vertices.append(vertex)
         self.n = len(self.vertices)
 
-
-        #newIndex = self.vertices.index(vertex)
         for n in self.adjMatrix: n.append(0)
         self.adjMatrix.append([0 for x in range(self.n)])
-        #self.adjMatrix[newIndex].append(newIndex)
         return True
 
     def removeVertex(self, vertex):
@@ -33,7 +30,6 @@ class adjacencyMatrix:
 
         for n in self.adjMatrix:
             n.pop(index)
-        #self.adjMatrix[index].pop(index)
         self.adjMatrix.pop(index)
 
         return True
