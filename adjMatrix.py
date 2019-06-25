@@ -58,3 +58,4 @@ class adjacencyMatrix:
     def printMatrix(self):
         print(self.vertices)
         for i in self.adjMatrix: print(i)
+            
