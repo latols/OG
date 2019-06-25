@@ -103,3 +103,4 @@ class adjacencyList:
             while currentNode is not None:
                 print('    vizinho de ' + key + ' = ' + currentNode.vertexName)
                 currentNode = currentNode.next
+                
